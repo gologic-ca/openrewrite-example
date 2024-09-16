@@ -1,0 +1,15 @@
+plugins {
+    id("org.openrewrite.rewrite") version("6.23.3")
+}
+
+rewrite {
+    activeRecipe("org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    rewrite("org.openrewrite.recipe:rewrite-spring:5.19.0")
+}
