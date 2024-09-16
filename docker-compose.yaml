@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gradle-openrewrite-terraform:
+    image: gradle
+    command: gradle rewriteRun
+    volumes:
+      - "./example/terraform:/home/gradle:z"
+  gradle-openrewrite-kubernetes:
+    image: gradle
+    command: gradle rewriteRun
+    volumes:
+      - "./example/kubernetes:/home/gradle:z"
