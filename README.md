@@ -11,7 +11,7 @@ And for the Java project, we use a recipe which upgrade Spring Boot from version
 You'll need Docker installed.
 
 ```bash
-docker-compose up [gradle-openrewrite-terraform|gradle-openrewrite-kubernetes]
+docker-compose up [gradle-openrewrite-terraform|gradle-openrewrite-kubernetes|gradle-openrewrite-java]
 ```
 
 Note: This comandline will use the Gradle Docker image to run OpenRewrite recipes.
