@@ -10,3 +10,8 @@ services:
     command: gradle rewriteRun
     volumes:
       - "./example/kubernetes:/home/gradle:z"
+  gradle-openrewrite-java:
+    image: gradle
+    command: gradle rewriteRun
+    volumes:
+      - "./example/java:/home/gradle:z"
