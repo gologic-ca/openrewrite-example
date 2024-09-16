@@ -35,9 +35,6 @@ resource "azurerm_storage_account" "example" {
   tags = {
     environment = "staging"
   }
-  enable_https_traffic_only = true
-  bypass                    = ["AzureServices"]
-  min_tls_version           = "TLS1_2"
 }
 
 resource "azurerm_resource_group" "example" {
@@ -76,15 +73,4 @@ resource "azurerm_app_service" "example" {
     type  = "SQLServer"
     value = "Server=some-server.mydomain.com;Integrated Security=SSPI"
   }
-  https_only = true
-  logs {
-    http_logs {
-      retention_in_days = 4
-      retention_in_mb   = 10
-    }
-  }
-  identity {
-    type = "SystemAssigned"
-  }
-  ftps_state = "Disabled"
 }
